@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIA-Translation-Agancy</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/sign-in.css">
+</head>
+
+<body>
+  <!-- navbar -->
+  <header id="header">
+    <section class="nav-header">
+      <div class="container">
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html" >خانه</a></li>
+            <li><a href="">نمونه کار</a></li>
+            <li><a href="">ارتباط با ما</a></li>
+            <li><a href="">درباره ما</a></li>
+            <li><a href="sign-in&up.html"> ورود و عضویت </a></li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <img src="picture/266162333_158558459922380_4622848164373601771_n.jpg" alt="">
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <section class="forms-section">
+    <h1 class="section-title">ثبت نام و ورود به سایت</h1>
+    <div class="forms">
+      <div class="form-wrapper is-active">
+        <button type="button" class="switcher switcher-login">
+          ورود
+          <span class="underline"></span>
+        </button>
+        <form class="form form-login">
+          <fieldset>
+            <legend>برای ورود به سایت ایمیل خود را وارد کنید :)</legend>
+            <div class="input-block">
+              <label for="login-email">ایمیل</label>
+              <input id="login-email" type="email" required>
+            </div>
+            <div class="input-block">
+              <label for="login-password">رمز عبور</label>
+              <input id="login-password" type="password" required>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn-login">ورود</button>
+        </form>
+      </div>
+      <div class="form-wrapper">
+        <button type="button" class="switcher switcher-signup">
+          ثبت نام
+          <span class="underline"></span>
+        </button>
+        <form class="form form-signup">
+          <fieldset>
+            <legend>برای ثبت نام ایمیل و رمز عبور را وارد کنید :) </legend>
+            <div class="input-block">
+              <label for="signup-email">ایمیل</label>
+              <input id="signup-email" type="email" required>
+            </div>
+            <div class="input-block">
+              <label for="signup-password">رمز عبور</label>
+              <input id="signup-password" type="password" required>
+            </div>
+            <div class="input-block">
+              <label for="signup-password-confirm">تکرار رمز عبور</label>
+              <input id="signup-password-confirm" type="password" required>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn-signup">ثبت نام</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<script>
+    const switchers = [...document.querySelectorAll('.switcher')]
+
+switchers.forEach(item => {
+    item.addEventListener('click', function() {
+        switchers.forEach(item => item.parentElement.classList.remove('is-active'))
+        this.parentElement.classList.add('is-active')
+    })
+})
+</script>
+  
+
+
+</body>
